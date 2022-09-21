@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from smpl2app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',views.loadfirst,name='loadfirst'),
+    path('loadsecond',views.loadsecond,name='loadsecond')
+
 ]
